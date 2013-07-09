@@ -23,12 +23,12 @@ public class Event implements Serializable {
 	private String title;
 
 	//bi-directional many-to-one association to IssueStatus
-	@ManyToOne(fetch=FetchType.LAZY)
+	@ManyToOne
 	@JoinColumn(name="status_id")
 	private IssueStatus issueStatus;
 
 	//bi-directional many-to-one association to User
-	@ManyToOne(fetch=FetchType.LAZY)
+	@ManyToOne
 	@JoinColumn(name="assigned_to_id")
 	private User user;
 
